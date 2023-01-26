@@ -26,7 +26,11 @@
                 </a>
             </td>
             <td>{{$post->body}}</td>
-            <td>{{$post->category_id}}</td>
+            <td>
+                @if ( $post->category)
+                    {{$post->category['name']}}
+                @endif
+            </td>
             <td class="">
                 <a href="{{route('admin.posts.edit', $post->id)}}">
                     <i class="fa-solid fa-pen ps-3"></i>
