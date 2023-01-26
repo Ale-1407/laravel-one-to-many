@@ -12,6 +12,7 @@
             <th scope="col">#id</th>
             <th scope="col">Title</th>
             <th scope="col">Body</th>
+            <th scope="col">category_id</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -25,6 +26,7 @@
                 </a>
             </td>
             <td>{{$post->body}}</td>
+            <td>{{$post->category_id}}</td>
             <td class="">
                 <a href="{{route('admin.posts.edit', $post->id)}}">
                     <i class="fa-solid fa-pen ps-3"></i>
